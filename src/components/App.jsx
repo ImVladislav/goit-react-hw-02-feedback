@@ -1,5 +1,5 @@
-import { Section } from './Section/Section';
+import { FeedBackCounter } from './FeedbackCounter/FeedbackCounter';
 
 export const App = () => {
-  return <Section title="Please leave feedback" />;
+  return <FeedBackCounter title="Please leave feedback" />;
 };

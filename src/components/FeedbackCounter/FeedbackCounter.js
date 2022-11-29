@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { StyledSection } from './FeedBackCounter.styled';
 import { Title } from 'components/Title/Title';
 
-export class Section extends Component {
+export class FeedBackCounter extends Component {
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
+
 
   render() {
 
