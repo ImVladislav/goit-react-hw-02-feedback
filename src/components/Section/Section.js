@@ -1,18 +1,16 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyledSection } from './FeedBackCounter.styled';
+import { StyledSection } from './Section.styled';
 import { Title } from 'components/Title/Title';
 
-export class FeedBackCounter extends Component {
+export class Section extends Component {
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
 
-
   render() {
-
 
     return (
       <StyledSection>
