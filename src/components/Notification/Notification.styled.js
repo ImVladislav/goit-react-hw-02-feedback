@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
 export const NotificationStyled = styled.p`
-  font-size: 20px;
+  font-size: 30px;
+    display: flex;
+  justify-content: center;
 `;
