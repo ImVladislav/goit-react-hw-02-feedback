@@ -14,17 +14,13 @@ export class Section extends Component {
     bad: 0,
   };
 
-  counterPositivePercentage = () => {
-    const good = this.state.good;
-    const total = this.counterTotal();
-    return Math.round((good * 100) / total);
-  };
+  counterPositivePercentage() {
+    return Number.parseInt((this.state.good / this.counterTotal(this.state)) * 100
+    );
+  }
 
-  counterTotal = () => {
-    const { good, neutral, bad } = this.state;
-    const result = good + neutral + bad;
-    return result;
-  };
+  counterTotal = count =>
+    Object.values(count).reduce((item, total) => item + total);
 
   onUpdateStates = e => {
     const name = e.currentTarget.name;  
@@ -34,7 +30,7 @@ export class Section extends Component {
   render() {
     const { good = 0, neutral = 0, bad = 0,} = this.state;
     const totalCounter = this.counterTotal(this.state);
-    const positivePercentageCounter = this.counterPositivePercentage;
+    const positivePercentageCounter = this.counterPositivePercentage();
     const message = 'There is no feedback'
     return (
 
